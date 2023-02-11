@@ -1,0 +1,11 @@
+#root {
+  width: 90%;
+  border: 1px solid orangered;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+  overflow: hidden;
+  /* border: 1px solid black; */
+}
+
+

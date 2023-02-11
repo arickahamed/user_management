@@ -1,0 +1,10 @@
+.footer_container {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: gainsboro;
+}
+
+.footer_container h6 {
+    text-decoration: none;
+}
