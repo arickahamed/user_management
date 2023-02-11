@@ -1,6 +1,7 @@
 .nav_container {
     /* border: 1px solid red; */
-    width: 90vw;
-    margin: 0 auto;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
 }

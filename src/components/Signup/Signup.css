@@ -1,0 +1,23 @@
+.signup_container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.signup_container h3 {
+    text-align: center;
+}
+
+.signup_container input {
+    display: block;
+    margin: 0 auto;
+    height: 1.5rem;
+}
+
+.signup_container button {
+    display: block;
+    margin: 0 auto 1.5rem auto;
+}
+
+.signup_container p {
+    text-align: center;
+}
