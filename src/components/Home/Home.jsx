@@ -4,6 +4,7 @@ import Login from "../Login/Login";
 import Footer from "../Shared/Footer/Footer";
 import Header from "../Shared/Header/Header";
 import Signup from "../Signup/Signup";
+import User from "../User/User";
 import Welcome from "../Welcome/Welcome";
 import "./Home.css";
 
@@ -15,7 +16,7 @@ const Home = () => {
                 <Route  path="/" element={<Welcome />} />
                 <Route  path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
-            
+                <Route path="/user" element={<User />} />
             
             </Routes>
             <Footer />

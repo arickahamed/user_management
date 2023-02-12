@@ -39,9 +39,9 @@ const Signup = () => {
                 setUserName("");
                 setPass("");
                 setConfirmPass("");
-                toast("Your Registration Completed!")
+                navigate("/login");
             }else {
-                alert("Your pass is incorrect");
+                toast("Please check you form carefully")
             }
             console.log("clicked");
         }
