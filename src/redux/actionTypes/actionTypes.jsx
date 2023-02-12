@@ -1,1 +1,2 @@
 export const LOGGEDIN_USER = "LOGGEDIN_USER";
+export const SET_USER_INFO = "SET_USER_INFO";

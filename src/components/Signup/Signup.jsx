@@ -53,6 +53,7 @@ const Signup = () => {
                 
                 if(newUser.length > 0) {
                     localStorage.setItem('User', JSON.stringify(newUser));
+                    toast("wait 5 sec , we are ready to go")
                     setTimeout(() => {
                         navigate("/login");
                       }, 5500);

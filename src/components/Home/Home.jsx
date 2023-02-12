@@ -7,6 +7,7 @@ import Footer from "../Shared/Footer/Footer";
 import Header from "../Shared/Header/Header";
 import Signup from "../Signup/Signup";
 import User from "../User/User";
+import UserDetail from "../UserDetail/UserDetail";
 import Welcome from "../Welcome/Welcome";
 import "./Home.css";
 
@@ -25,7 +26,7 @@ const Home = () => {
                         <User />
                     </ProtectedRoute>
                 } />
-            
+            <Route path="/user/:id" element={<UserDetail />} />
             </Routes>
             <Footer />
         </div>

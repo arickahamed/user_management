@@ -1,0 +1,16 @@
+.userdetail_container {
+    border: 1px solid rgb(230, 206, 187);
+    margin: 1rem auto;
+    width: 70%;
+    padding-left: 1rem;
+    border-radius: 0.8rem;
+    background-color: rgb(141, 204, 240);
+    box-shadow: 3px 3px 5px solid blue;
+}
+
+.userdetail_container h4 {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
