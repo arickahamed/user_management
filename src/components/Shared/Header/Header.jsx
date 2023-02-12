@@ -16,8 +16,8 @@ const Header = () => {
             <Box sx={{ flexGrow: 1 }}>               
                 <AppBar position="static">
                 <Toolbar>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        News
+                    <Typography variant="h6" component="div" onClick={()=> navigate("/user")} sx={{ flexGrow: 1 }}>
+                        User
                     </Typography>
                     {user?.userName? <h3 style={{color: "orange"}}>{user.userName}</h3> :
                         <Button onClick={onbtnClick

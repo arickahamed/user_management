@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import Login from "../Login/Login";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import Footer from "../Shared/Footer/Footer";
 import Header from "../Shared/Header/Header";
 import Signup from "../Signup/Signup";
@@ -19,7 +20,11 @@ const Home = () => {
                 <Route  path="/" element={<Welcome />} />
                 <Route  path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/user" element={<User />} />
+                <Route path="/user" element={
+                    <ProtectedRoute user={user}>
+                        <User />
+                    </ProtectedRoute>
+                } />
             
             </Routes>
             <Footer />
