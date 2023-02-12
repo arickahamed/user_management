@@ -39,7 +39,7 @@ const Signup = () => {
                 setUserName("");
                 setPass("");
                 setConfirmPass("");
-                navigate("/login");
+                // navigate("/login");
             }else {
                 toast("Please check you form carefully")
             }
@@ -49,6 +49,8 @@ const Signup = () => {
         console.log(newUser.length);
 
             useEffect(() => {
+                // localStorage.setItem('User', JSON.stringify(newUser));
+                
                 if(newUser.length > 0) {
                     localStorage.setItem('User', JSON.stringify(newUser));
                     setTimeout(() => {

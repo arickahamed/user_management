@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch } from "react-redux";
 import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
+import { loggedinUser } from '../../redux/actions/actions';
 import "../Signup/Signup.css";
 
 const Login = () => {
 
     let navigate = useNavigate(); 
+    const dispatch = useDispatch();
 
     const [loginUser, setLoginUser] = useState();
     const [loginPass, setLoginPass] = useState();
@@ -21,6 +24,7 @@ const Login = () => {
     const handleLogin = () => {
         if(loginUser && loginPass) {
             if(loginUser === regUser.userName && loginPass === regUser.pass) {
+                dispatch(loggedinUser(regUser));
                 // toast("You are ready to login");
                 setLoginUser("");
                 setLoginPass("");
