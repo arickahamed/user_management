@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./Signup.css";
 
+
 const Signup = () => {
+
+    let navigate = useNavigate();
+
+
     const [userName, setUserName] = useState();
     const [pass, setPass] = useState();
     const [confirmPass, setConfirmPass] = useState();
@@ -31,7 +39,7 @@ const Signup = () => {
                 setUserName("");
                 setPass("");
                 setConfirmPass("");
-
+                toast("Your Registration Completed!")
             }else {
                 alert("Your pass is incorrect");
             }
@@ -43,6 +51,9 @@ const Signup = () => {
             useEffect(() => {
                 if(newUser.length > 0) {
                     localStorage.setItem('User', JSON.stringify(newUser));
+                    setTimeout(() => {
+                        navigate("/login");
+                      }, 5500);
                 }
             }, [newUser]);
         
@@ -60,8 +71,9 @@ const Signup = () => {
                 
                 <button onClick={handleClick}>Sign Up</button>
                 <hr />
-                <p>Already have an account ? Login</p>
+                <p>Already have an account ? <Link to="/login">Login</Link></p>
             </div>
+            <ToastContainer />
         </div>
     )
 }
